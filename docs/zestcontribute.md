@@ -1,4 +1,4 @@
-# How to report a issue on GitHub
+# How to Contribute & report a issue on GitHub
 ## Requirements:
 To report a issue on Github following conditions must be followed:
 
