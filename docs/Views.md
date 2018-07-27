@@ -53,4 +53,11 @@ Use in view file like that
 its print malik on screen
 
 
+# Minify HTML files
+ZestFramework minify html by default if you didnt want minify html view files you should passed false argument in view method of View class
+
+ - **First Argument:** file name with path like file or path/file
+ - **Second Argument:** Any parameter that you want to passed much be in array
+ - **Third Argument:** Minify , true=> minify , false => not minify much be bool , default value is true
+
 

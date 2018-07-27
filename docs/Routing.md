@@ -8,6 +8,11 @@ the path is the like example.com/about in this case about will be the path contr
 
 ### Dispatch
 `$router->dispatch($_SERVER['QUERY_STRING']);` are use to process request
+# Route with Closure or Callback
+You can also define a route that uses a Closure or callback as the handler like so
+ `$router->add('user/{id:[0-9]}',  function ($args) {
+    echo 'Example route using closure '.$args['id'] . " ".$args['name'];
+  });`
 
 ## Router with parameter
 Router with parameter means you want passing parameter to the url e.g example.com/profile/100 `100` is the parameter of the request

@@ -15,6 +15,8 @@ and then run
 
 `$ composer update`
 
+# Local Development With VirtualHost
+
 Running Your Project With VirtualHost
 
 	    <VirtualHost *:80>
