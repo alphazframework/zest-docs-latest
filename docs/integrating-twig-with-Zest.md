@@ -82,3 +82,6 @@ _**App/Views/Home/home.html**_
 
 
 ##### Note after reading this you have to understand that you can easily integrate any third-party labs in `Zest` framework
+
+# Note
+This docs is not complete for zest framework we will complete soon

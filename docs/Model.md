@@ -23,6 +23,3 @@ You can accesss models in following way
 `\App\Models\modalname::method(param);`
 So in our above example its look like
 `\App\Models\Post::yourmethod`
-
-# Note
-This docs is not complete for zest framework we will complete soon

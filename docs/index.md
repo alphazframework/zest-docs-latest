@@ -14,6 +14,9 @@ As composer autoder is used for autoloading files, so its necessary to load file
 ##### Useful Info:
 The size of zest core files less then 1MB
 
+# Note
+This docs is not complete for zest framework we will complete soon
+
 
 
 
