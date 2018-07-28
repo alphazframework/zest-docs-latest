@@ -23,3 +23,18 @@ This will create example.com/profile/100 for you you can access by placeholder t
 You can also add router with complex parameter in this case you have to use `regx`
 `$router->add('{controller}/{username:[a-z+0-9]+}/{action}', ['controller' => 'profile','action' => 'index']);`
 its create url example.com/profile/username you can pass string+numbers here and access through placeholder that you define in this case `username`
+
+# Route Caching
+Zest Franework provide router caching feature so you should take advantage of Zest's route cache.
+
+**Zest router cache file** Zest router file located at *root/Storage/Cache*
+
+Using the route cache will drastically decrease the amount of time it takes to register all of your application's routes. In some cases, your route registration may even be up to 100x faster. To generate a route cache, just need to enable from config file
+
+**ROUTER_CACHE** => set to true for enable caching, false to disable caching , Default value is true
+
+Zest framework provide an easy creating website using zest
+
+fter running this command, your cached routes file will be loaded on every request. Remember, if you add any new routes. You dont need to regenerate a fresh route cache, Because Zest framework generate automatically for you affter specisif time define in config file.
+
+**ROUTE_CACHE_REGENERATE** timestamp for cache file, after expire cache file auto refreshed , default value is 3600 - 1Hour.
