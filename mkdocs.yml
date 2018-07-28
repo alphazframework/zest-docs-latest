@@ -1,0 +1,12 @@
+site_name: Zest
+pages:
+    - Home: index.md
+    - Installation: installation.md
+    - Configuration: configuration.md
+    - Routing: routing.md
+    - Controllers: controller.md
+    - Views: views.md
+    - Integrating twig with Zest: integrating-twig-with-Zest.md
+    - Models: model.md
+    - Upgrade to 1.9.1: UPGRADE-1.9.1.md
+theme: readthedocs
