@@ -9,6 +9,7 @@ pages:
     - Integrating twig with Zest: integrating-twig-with-Zest.md
     - Models: model.md
     - Upgrade to 1.9.1: UPGRADE-1.9.1.md
+    - Contribute: zestcontribute 
 theme: readthedocs    
     
 
