@@ -111,3 +111,65 @@ $lastError = $validator->error()->lase('email');
 }
 
 ```
+# Available Validation Rules
+The following validation rule are available starting from Zest v1.9.1
+
+## Required rule
+The required rule is use to specific that a specific field cannot be empty:
+
+```php 
+    $rules = [
+        'username' => ['required' => true,],
+    ];
+```
+## Int rule
+The int rule is use to specific that a specific field much be int:
+
+```php 
+    $rules = [
+        'favNum' => ['int' => true,],
+    ];
+```
+## Float rule
+The float rule is use to specific that a specific field much be float:
+
+```php 
+    $rules = [
+        'payment' => ['float' => true,],
+    ];
+```
+## String rule
+The string rule is use to specific that a specific field much be string:
+
+```php 
+    $rules = [
+        'name' => ['string' => true,],
+    ];
+```
+## Email rule
+The required rule is use to specific that a specific field much be valid email:
+
+```php 
+    $rules = [
+        'email' => ['email' => true,],
+    ];
+```
+## Ip rule
+The ip rule is use to specific that a specific field much be valid ip:
+
+```php 
+    $rules = [
+        'email' => ['email' => true,],
+    ];
+```
+## JSON rule
+The json rule validate the json value
+
+```php 
+    $validation = new Validation('jsonValue','validate,'json');
+```
+## Unique rule
+The unique rule allows you to check if a given value exists in a specific database table:
+```php 
+    $validation = new Validation(['field'=> 'fieldLike_username','value'=>'valueToBeSearch'],'tabelName');
+```
