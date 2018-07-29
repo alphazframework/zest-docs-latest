@@ -96,7 +96,7 @@ class User extends \Softhub99\Zest_Framework\Controller\Controller
     *  @return array
  */
 
-$usernameErrors = $validator->error()->get('password');
+$passwordErrors = $validator->error()->get('password');
 
 /**
     * Get the first validation error for a specific fields
