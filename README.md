@@ -1,1 +1,3 @@
+[![Documentation Status](https://readthedocs.org/projects/zest/badge/?version=latest)](https://zest.readthedocs.io/en/latest/?badge=latest)
+
 # Docs for zest framework
