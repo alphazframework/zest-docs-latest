@@ -1,6 +1,6 @@
 # Libraries
-## Benchmarking Class
-Zest has a Benchmarking class , enabling the time difference between any two marked points to be calculated.
+## Benchmarking class
+Zest has a Benchmarking class, enabling the time difference between any two marked points to be calculated.
 ### Using the Benchmark Class
 The Benchmark class can be used within your controllers, views, or your models. The process for usage is this:
 
@@ -10,11 +10,11 @@ The Benchmark class can be used within your controllers, views, or your models. 
 
 - Run the “elapsed time” function to view the results
 
-   Here’s an example using real code: 
+   Here’s an example using real code:
 
   `$benchmark = new Benchmark;
     $start = $benchmark->start();
-   for ($i=0; $i < 1000; $i++) { 
+   for ($i=0; $i < 1000; $i++) {
   	$a = $i;
   }
   $end = $benchmark->end();
@@ -23,8 +23,8 @@ passed round value if you want round it with 4 int or whatever you like.
 
 ## Class Reference
 ### synopsis
-    `
-    public function start( void )
-    public function end( void )
-    public function elapsedTime(int $round = null)
-    `
+```PHP
+public function start( void )
+public function end( void )
+public function elapsedTime(int $round = null)
+```

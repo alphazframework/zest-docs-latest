@@ -10,37 +10,36 @@ You can easily create controllers in ""Zest"" Framework goto _App/Controllers/_ 
 
 	    public function index()
 	    {
-	    
+
 	        echo View::view("Home/index"); //you will learn more about view in later this is for accessing view
 
 	    }
-	   
+
 	}
 
-This is easy way for creating controllers this create home page 
+This is easy way for creating controllers this create home page
 
-# Complex way for writing controller 
+# Complex way for writing controller
 
+```PHP
+	<?php
 
-		<?php
+	namespace App\Controllers;
 
-		namespace App\Controllers;
+	use Softhub99\Zest_Framework\View\View; //you will learn more about view in later this is for accessing view
 
-		use Softhub99\Zest_Framework\View\View; //you will learn more about view in later this is for accessing view
+	class About extends \Softhub99\Zest_Framework\Controller\Controller
+	{
 
-		class About extends \Softhub99\Zest_Framework\Controller\Controller
-		{
-		 
-		    public function index()
-		    {
-		       echo $this->route_params['username']; //$this->router_params use for accessing paramter begin passed for more information see https://github.com/Softhub99/Zest/wiki/Routing#router-with-complex-parameter
-		    }
-		    public function about()
-		    {
-		        echo view::SetTemplate("Home/index.html",[
-		    'header' => 'PHP Tamplet engine',]); //you will learn more about view/tampleting in later this is for accessing view
-		    }    
-	    
-		}
+	    public function index()
+	    {
+	       echo $this->route_params['username']; //$this->router_params use for accessing paramter begin passed for more information see https://github.com/Softhub99/Zest/wiki/Routing#router-with-complex-parameter
+	    }
+	    public function about()
+	    {
+	        echo view::SetTemplate("Home/index.html",[
+	    'header' => 'PHP Tamplet engine',]); //you will learn more about view/tampleting in later this is for accessing view
+	    }
 
-
+	}
+```

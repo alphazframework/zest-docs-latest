@@ -1,8 +1,8 @@
-### Installation Requirements: 
+### Installation Requirements:
 1. PHP 7.1
-2. Composer 
+2. Composer
 
-Installing Zest is very simple, first ensure you have the right PHP version and composer installed then in your command prompt run:
+Installing Zest is very simple. First, ensure you have the right PHP version and Composer installed, then in your command prompt run:
 
 `$ composer create-project softhub99/zest blog`
 

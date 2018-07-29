@@ -35,7 +35,6 @@ Using the route cache will drastically decrease the amount of time it takes to r
 
 Zest framework provide an easy creating website using zest
 
-After running this command, your cached routes file will be loaded on every request. Remember, if you add any new routes. You dont need to regenerate a fresh route cache, Because Zest framework  regenerate a fresh route cache automatically for you affter specific time define in config file.
+After running this command, your cached routes file will be loaded on every request. Remember, if you add any new routes. You don't need to regenerate a fresh route cache, Because Zest framework regenerate a fresh route cache automatically for you affter specific time define in config file.
 
 **ROUTE_CACHE_REGENERATE** timestamp for cache file, after expire cache file auto refreshed , default value is 3600 - 1Hour.
-
