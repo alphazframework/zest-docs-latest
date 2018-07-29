@@ -38,7 +38,7 @@ This is easy way for creating controllers this create home page
 	    public function about()
 	    {
 	        echo view::SetTemplate("Home/index.html",[
-	    'header' => 'PHP Tamplet engine',]); //you will learn more about view/tampleting in later this is for accessing view
+	    'header' => 'PHP Template engine',]); //you will learn more about view/template engine in later this is for accessing view
 	    }
 
 	}

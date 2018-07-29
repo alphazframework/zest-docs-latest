@@ -52,7 +52,7 @@ $name = $args['name'];
 Zest supports a built-in template engine that you can use in simple way.
 
 ```PHP
-        echo View::randerTemplate("Home/tamplet.php",[
+        echo View::randerTemplate("Home/template.php",[
         		'name' => "malik",
         ]);
 ```
