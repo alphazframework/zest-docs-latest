@@ -166,7 +166,7 @@ The ip rule is use to specific that a specific field much be valid ip:
 The json rule validate the json value
 
 ```php 
-    $validation = new Validation('jsonValue','validate,'json');
+    $validation = new Validation('jsonValue','validate','json');
 ```
 ## Unique rule
 The unique rule allows you to check if a given value exists in a specific database table:
