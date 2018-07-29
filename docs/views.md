@@ -1,63 +1,74 @@
-Zest framework provide two way for views default built-in templating engine and without templating  engine, Zest framework cant support third-party templating engine but you can implement if you want you can see how to implement third-party templating engine in next section.
-# Creating a View in simple way without templating engine
-Typically all views should be created inside `App/Views/` folder, 
-suppose you are going to create home view so in this case Save file `App/Views/Home.php` or `App/Views/Home/Home.php` what ever you want
+Zest framework provides two ways for views. The default, built-in templating
+engine, and without a templating engine. Zest framework can't support
+third-party templating engines, but if you want to, you can see how to
+implement third-party templating engines in next section.
 
+# Creating a View in simple way without a templating engine.
+Typically, all views should be created inside the `App/Views/` folder. Suppose
+you're going to create a home view. So in this case, save the file as
+`App/Views/Home.php` or `App/Views/Home/Home.php` (whatever you want).
+
+```HTML
 	<!doctype html>
 	<body>
 		<div class="container">
 			Welcome
 		</div>
-	</body>	
+	</body>
+```
 
-You can access the view form controller by ` echo View::View("Home/index");`
-Your home controller look like that
+You can access the view form controller by `echo View::View("Home/index");`.
 
-     <?php
-	namespace App\Controllers;
-	use \Softhub99\Zest_Framework\View\View;
+Your home controller should look like this:
 
-	class Home extends 
-	\Softhub99\Zest_Framework\Controller\Controller
-	{
+```PHP
+<?php
+namespace App\Controllers;
+use \Softhub99\Zest_Framework\View\View;
 
-	    public function index()
-	    {
-	        echo View::view("Home/index");        
+class Home extends \Softhub99\Zest_Framework\Controller\Controller
+{
+    public function index()
+    {
+        echo View::view("Home/index");
+    }
+}
+```
 
-	    }
-	}
+In the case of passing parameter, it should look like this:
 
-In case passing parameter you its look like
+```PHP
+$data = ['name' => 'malik'];
+echo View::View("Home/index",$data);
+```
 
-        $data = ['name' => 'malik'];
-        echo View::View("Home/index",$data);
+You can access this parameter by:
 
-You can access this parameter by 
+```PHP
+$name = $args['name'];
+```
 
-	$name = $args['name'];
+# Creating a View in a simple way with a templating engine
+Zest supports a built-in template engine that you can use in simple way.
 
-
-# Creating a View in simple way with templating engine
-Zest support built-in tamplet engine
-you can use in simple way
-
+```PHP
         echo View::randerTemplate("Home/tamplet.php",[
         		'name' => "malik",
         ]);
+```
 
-Use in view file like that
+Use in view file like this:
 
+```PHP
 		{% name %}
+```
 
-its print malik on screen
+It prints "malik" on the screen.
 
 
 # Minify HTML files
-ZestFramework minify html by default if you didnt want minify html view files you should passed false argument in view method of View class
+ZestFramework minifies HTML by default. If you don't want to minify HTML view files, you should passed `false` argument in view method of the View class
 
- - **First Argument:** file name with path like file or path/file
- - **Second Argument:** Any parameter that you want to passed much be in array
- - **Third Argument:** Minify , true=> minify , false => not minify much be bool , default value is true
-
-
+ - **First Argument:** file name with path like file or path/file.
+ - **Second Argument:** Any parameter that you want to be passed must be in an array.
+ - **Third Argument:** Minify; `true` => Minify, `false` => Don't minify. Must be `bool`. Default value is `true`.
