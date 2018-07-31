@@ -35,7 +35,7 @@ const DB_PASS = 'your-database-password';
 ```
 
 ### Simple example
-Here is simple example follow:
+Here is simple example:
 
 ```php
 <?php
@@ -63,7 +63,7 @@ class Post extends DB
 
 ### Insert
 
-For insert data into database you need call ```insert();``` method with parameters,The ```insert``` method return id on success boolean false on fail take a look at example:
+For insert data into database you need to used ```insert();``` method with parameters,The ```insert``` method return id on success boolean false on fail take a look at example:
 
 ```php
 // rest code ...
@@ -88,7 +88,7 @@ public function create($field1,$field2,$field3)
 ```
 
 ### Select
-For selecting record you need just call ```select()``` method, take a look at following example:
+For selecting record you need to used ```select()``` method, take a look at following example:
 
 ```php
 // rest code ...
@@ -113,7 +113,7 @@ public function select()
 ```
 
 ### Select by where clause
-For select records at specific condition or using where clause the method is same you just need passed wheres parameter take a look at example:
+For select records at specific condition or using where clause the method is same you just need to passed wheres parameter take a look at example:
 
 ```php
 // rest code ...
@@ -147,7 +147,7 @@ For using multiple wheres clause take a look at example:
 ```
 
 #### OrderBy 
-For sorting orders you need passed orderby paramter take a look at example:
+For sorting orders you need to passed ```orderby``` paramter take a look at example:
 
 ```php
 // rest code ...
@@ -156,7 +156,7 @@ For sorting orders you need passed orderby paramter take a look at example:
 // rest code ...
 ```  
 #### Limits
-For selecting limited records you need passed ```limit``` paramter take a look at example:
+For selecting limited records you need to passed ```limit``` paramter take a look at example:
 
 ```php
 // rest code ...
@@ -168,7 +168,7 @@ For selecting limited records you need passed ```limit``` paramter take a look a
 ```  
 
 #### Debug
-For debuging or seeing the query you need to passe d ```debug``` parameter take a look at example:
+For debuging or seeing the query you need to passe  ```debug``` parameter take a look at example:
 
 ```php
 // rest code ...
@@ -180,7 +180,7 @@ For debuging or seeing the query you need to passe d ```debug``` parameter take 
 ```  
 
 ### Delete
-For deleting record in mysql we need called ```delete()``` method with id parameter, **Note: If id is not provided all record form specific tabel will be erased/deleted and this action never be undo.**
+For deleting record in mysql we need to used ```delete()``` method with id parameter, **Note: If id is not provided all record form specific tabel will be erased/deleted and this action never be undo.**
 Here is following example:
 
 ```php
@@ -204,7 +204,7 @@ public function delete($id)
 // rest code ...
 ```
 ### Update
-For updating records in database we need to called ```update``` method take a look at example:
+For updating records in database we need to used ```update``` method take a look at example:
 
 ```php
 // rest code ...
@@ -228,7 +228,7 @@ public function update($id,$uId)
 ```
 
 ### Count
-For count record in database we need to called ```count()``` method take a look at example
+For count record in database we need to used ```count()``` method take a look at example
 
 ```php
 // rest code ...
@@ -237,7 +237,7 @@ For count record in database we need to called ```count()``` method take a look 
 ```  
 
 ### Create the database
-For create the database we need to called ```createDb()``` method take a look at example 
+For create the database we need to used ```createDb()``` method take a look at example 
 ```php
 // rest code ...
     $result = $result = $db->createDb('phone');  
@@ -245,7 +245,7 @@ For create the database we need to called ```createDb()``` method take a look at
 ```  
 
 ### Delete the database
-For delete the database we need to called ```deleteDb()``` method take a look at example 
+For delete the database we need to used ```deleteDb()``` method take a look at example 
 ```php
 // rest code ...
     $result = $result = $db->deleteDb('phone');  
@@ -253,7 +253,7 @@ For delete the database we need to called ```deleteDb()``` method take a look at
 ```  
 
 ### Create the table
-For creating table we need to called ``` createTbl ```
+For creating table we need to used ``` createTbl ```
  take a look at example:
 ```php
 // rest code ...
@@ -262,7 +262,7 @@ For creating table we need to called ``` createTbl ```
 ```
 
 ### Delete the table
-For delete the database we need to called ```deleteTbl()``` method take a look at example 
+For delete the database we need to used ```deleteTbl()``` method take a look at example 
 ```php
 // rest code ...
     $result = $result = $db->deleteTbl('db|_name','users');  
