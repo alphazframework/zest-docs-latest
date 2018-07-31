@@ -1,7 +1,7 @@
-The Zest framework provides support for email sending using SMTP and php mailer
+The Zest framework provides support for sending email using SMTP and phpMailer.
 
 # SMTP Setup
-To send mail using SMTP first update your Config.php file as follows:
+To send email using SMTP, first update your `Config.php` file as follows:
 
 ```php
 
@@ -15,25 +15,25 @@ const SMPT_HOST = "your-smtp-host";
  * SMPT User
  *
  * @var string
- */    
+ */
 const SMPT_USER = "your-smtp-user";
 /**
  * SMPT Pass
  *
  * @var string
- */    
+ */
 const SMPT_PASS = "your-smtp-pass";
 /**
  * SMPT Port
  *
  * @var int
- */    
+ */
 const SMPT_PORT = 111;
 
 ```
 
 # Sending Mail
-To send an email simply do the following:
+To send an email, simply do the following:
 
 ```php
 <?php
@@ -46,7 +46,7 @@ class Home extends \Softhub99\Zest_Framework\Controller\Controller
 {
 
     public function index()
-    {       
+    {
         $mail = new Mail;
         //Set subject.
         $mail->setSubject('Example mail');
@@ -68,7 +68,7 @@ class Home extends \Softhub99\Zest_Framework\Controller\Controller
 ```
 
 ## Sending SMTP email
-For sending email over smtp you just need add ```$mail->isSMTP(true);``` before ```$mail->send();```it become following
+For sending email over SMTP, you just need to add ```$mail->isSMTP(true);``` before ```$mail->send();```. It becomes the following:
 
 ```php
 //rest code .......
@@ -82,9 +82,9 @@ if ($mail->send()) {
 
 ```
 ### Sending Mail with Template/HTML
-For sending html/template mail you just need change method name , instead of calling ```setContentPlain()```, You just need call ```setContentHTML()```
+For sending HTML/template mail, you just need change the method name. Instead of calling ```setContentPlain()```, you just need call ```setContentHTML()```
 
-```php
+```PHP
 //rest code .......
 $mail->setSender('mail@example.com');
 //Set the plain content of the mail.
@@ -92,31 +92,31 @@ $mail->setContentPlain('Example plain-content!');
 //rest code .......
 
 ```
-### Sending Mail with Attachment
+### Sending email with an attachment.
 To add an attachment to your mail simple add this line ``` $mail->addAttachment($file); ```
 
-```php
+```PHP
 //rest code .......
 $mail->addAttachment("path/to/file");
 //rest code .......
 
 ```
-if you want send mutiple files just repeat this line what ever like you want attach.
+If you want to send mutiple files, just repeat this line with whatever you want to attach.
 
-### Setting replyTo Address
-for setting reply to you just need call ```setReplyTo()``` method
+### Setting a "reply to" address.
+For setting a "reply to" address, you just need to call the ```setReplyTo()``` method.
 
 ```php
 $mail->setReplyTo('example@example.com');
 ```
 ### Adding CC
-To add cc addresses you need just call ```addCc();``` method
+To add CC addresses, you just need to call the ```addCc();``` method.
 
 ```php
 $mail->addCc('CC@example.com');
 ```
 ### Adding BCC
-To add bcc addresses you need just call ```addBcc();``` method
+To add BCC addresses, you just need to call the ```addBcc();``` method.
 
 ```php
 $mail->addBcc('bcc@example.com');
