@@ -3,7 +3,7 @@ Session handling library bundled with Zest Framework
 # Session Handling
 
 ## Configuration
-There is no configuration need used session library in zest framework  but if you want change session storage path in Config.php you have to change according to your details of your server.
+There is no configuration need for using session library in zest framework  but if you want change session storage path in Config.php you have to change according to your details of your server.
 
 ```php
 /**
