@@ -1,8 +1,8 @@
-Zest provides different methods to easily validation of data
+Zest provides different methods to easily validate data.
 
 ## Validation simple usage
 
-Lets consider a simple example, we shall attempt to accpet input from the User, the first thing we need to do define the necessary routes
+Let's consider a simple example. We shall attempt to accept input from the user. The first thing we need to do is define the necessary routes.
 
 ### Define Route
 
@@ -32,7 +32,7 @@ class User extends \Softhub99\Zest_Framework\Controller\Controller
                 'email' => ['required' => true],
                 'password' => ['required' => true, ],
             ];
-            $validation = new Validation(input_all(),$rules,'input');    
+            $validation = new Validation(input_all(),$rules,'input');
             if($validation->fail()){
                 $errors = $validation->error()->get();
 
@@ -44,15 +44,15 @@ class User extends \Softhub99\Zest_Framework\Controller\Controller
             } else {
                 //TO-Do create the user
                 //We will provide auth clas soon
-            }            
+            }
         } else {
             View::view('Home/form');
-        }    
+        }
     }
 }
 
 ```
-#### user form file
+#### User form file
 
 ```HTML
 
@@ -75,7 +75,7 @@ class User extends \Softhub99\Zest_Framework\Controller\Controller
 </html>
 ```
 
-### Getting Validation errors for specific fields
+### Getting validation errors for specific fields
 
 
 ```PHP
@@ -91,8 +91,8 @@ class User extends \Softhub99\Zest_Framework\Controller\Controller
 
  /**
     *  Get all the validation errors for a specific fields
- * 
-    *  @param $key   
+ *
+    *  @param $key
     *  @return array
  */
 
@@ -100,9 +100,9 @@ $passwordErrors = $validator->error()->get('password');
 
 /**
     * Get the first validation error for a specific fields
- * 
+ *
     * @param $key
-    * @return mixed   
+    * @return mixed
  */
 
 $firstError = $validator->error()->first('email');
@@ -115,61 +115,61 @@ $lastError = $validator->error()->lase('email');
 The following validation rule are available starting from Zest v1.9.1
 
 ## Required rule
-The required rule is use to specific that a specific field cannot be empty:
+The required rule is used to specify that a specific field cannot be empty:
 
-```php 
+```php
     $rules = [
         'username' => ['required' => true,],
     ];
 ```
 ## Int rule
-The int rule is use to specific that a specific field much be int:
+The int rule is used to specify that a specific field much be int:
 
-```php 
+```php
     $rules = [
         'favNum' => ['int' => true,],
     ];
 ```
 ## Float rule
-The float rule is use to specific that a specific field much be float:
+The float rule is used to specify that a specific field much be float:
 
-```php 
+```php
     $rules = [
         'payment' => ['float' => true,],
     ];
 ```
 ## String rule
-The string rule is use to specific that a specific field much be string:
+The string rule is used to specify that a specific field much be string:
 
-```php 
+```php
     $rules = [
         'name' => ['string' => true,],
     ];
 ```
 ## Email rule
-The required rule is use to specific that a specific field much be valid email:
+The required rule is used to specify that a specific field must be a valid email address:
 
-```php 
+```php
     $rules = [
         'email' => ['email' => true,],
     ];
 ```
-## Ip rule
-The ip rule is use to specific that a specific field much be valid ip:
+## IP rule
+The IP rule is used to specify that a specific field must be valid IP address:
 
-```php 
+```php
     $rules = [
         'email' => ['email' => true,],
     ];
 ```
 ## JSON rule
-The json rule validate the json value
+The JSON rule validates the json value
 
-```php 
+```php
     $validation = new Validation('jsonValue','validate','json');
 ```
 ## Unique rule
 The unique rule allows you to check if a given value exists in a specific database table:
-```php 
+```php
     $validation = new Validation(['field'=> 'fieldLike_username','value'=>'valueToBeSearch'],'tabelName');
 ```
