@@ -19,10 +19,12 @@ To report an issue on Github, the following conditions must be followed:
 
 # How to contribute on GitHub
 We always welcome contributors if they follow our guidelines.
+
 * You never allow add third-party Composer dependencies or classes.
 * You allow to improve existing features or add new features.
 * You allow update Zest framework code or core code.
 * When you want send pull request. You have provide brief description about code either you update exsting code or adding new feature.
+
 * Zest => https://github.com/Softhub99/Zest
 * Core => https://github.com/Softhub99/Zest_Framework
 
