@@ -1,6 +1,6 @@
 Cryptography encryption/decryption library bundled with Zest Framework
 
-# Cryptography encypting
+# Cryptography
 
 ### Encryption
 To encrypt the string/data you need to use a ```encrypt()``` function just simple and straightforward take a look at an example: 
