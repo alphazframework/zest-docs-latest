@@ -12,6 +12,7 @@ pages:
     - Sending Mail: mail.md
     - Database Manipulation: database.md
     - Session Handling: session.md
+    - Cryptography: cryptography.md
     - Upgrade to 1.9.1: UPGRADE-1.9.1.md
     - Upgrade to 1.9.3: Upgrade to 1.9.3.md
     - Contribute: zestcontribute.md
