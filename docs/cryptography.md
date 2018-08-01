@@ -20,7 +20,7 @@ To decrypt the string/data you need to use a ```decrypt()``` function just simpl
 <?php
 
 //its prototype is ;
-//decrypt(string,bit); //32 or 64 default 32
-decrypt("Hello World");
+//decrypt(hash,bit); //32 or 64 default 32
+decrypt("somehashgenereteby encrypt()");
 
 ```
