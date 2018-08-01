@@ -33,7 +33,7 @@ class users
 }
 ```
 ### Get
-Forget the session value you need to used ```getValue()``` method take a look at an example:
+To get the session value you need to used ```getValue()``` method take a look at an example:
 
 ```php
 <?php
