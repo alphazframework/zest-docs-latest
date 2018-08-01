@@ -3,8 +3,8 @@ Database management library bundled with Zest Framework
 # Database management
 
 ## Configuration
-In order to used database in zest framework you need config it properly
-in Config.php you have to correct according to your details of your server.
+In order to the user database in zest framework you need config it properly
+in Config.php you have to correct according to the details of your server.
 
 ```php
 /**
@@ -63,7 +63,7 @@ class Post extends DB
 
 ### Insert
 
-For insert data into database you need to used ```insert();``` method with parameters,The ```insert``` method return id on success boolean false on fail take a look at example:
+For insert data into the database, you need to used ```insert();``` method with parameters, The ```insert``` method return id on success boolean false on fail take a look at an example:
 
 ```php
 // rest code ...
@@ -88,7 +88,7 @@ public function create($field1,$field2,$field3)
 ```
 
 ### Select
-For selecting record you need to used ```select()``` method, take a look at following example:
+For selecting record you need to use ```select()``` method, take a look at following example:
 
 ```php
 // rest code ...
@@ -113,7 +113,7 @@ public function select()
 ```
 
 ### Select by where clause
-For select records at specific condition or using where clause the method is same you just need to passed wheres parameter take a look at example:
+For select records at the specific condition or using where clause the method is same you just need to passed wheres parameter take a look at an example:
 
 ```php
 // rest code ...
@@ -137,7 +137,7 @@ public function select($id)
 // rest code ...
 ```
 ##### For multiple conditions
-For using multiple wheres clause take a look at example:
+For using multiple wheres clauses take a look at an example:
 
 ```php
 // rest code ...
@@ -147,7 +147,7 @@ For using multiple wheres clause take a look at example:
 ```
 
 #### OrderBy 
-For sorting orders you need to passed ```orderby``` paramter take a look at example:
+For sorting orders, you need to passed ```orderby``` parameter take a look at an example:
 
 ```php
 // rest code ...
@@ -156,7 +156,7 @@ For sorting orders you need to passed ```orderby``` paramter take a look at exam
 // rest code ...
 ```  
 #### Limits
-For selecting limited records you need to passed ```limit``` paramter take a look at example:
+For selecting limited records you need to passed ```limit``` parameter take a look at an example:
 
 ```php
 // rest code ...
@@ -180,8 +180,8 @@ For debuging or seeing the query you need to passe  ```debug``` parameter take a
 ```  
 
 ### Delete
-For deleting record in mysql we need to used ```delete()``` method with id parameter, **Note: If id is not provided all record form specific tabel will be erased/deleted and this action never be undo.**
-Here is following example:
+For deleting a record in myself we need to used ```delete()``` method with id parameter, **Note: If it is not provided all record form specific table will be erased/deleted and this action never be undone.**
+Here is the following example:
 
 ```php
 // rest code ...
@@ -204,7 +204,7 @@ public function delete($id)
 // rest code ...
 ```
 ### Update
-For updating records in database we need to used ```update``` method take a look at example:
+For updating records in a database we need to used ```update``` method take a look at an example:
 
 ```php
 // rest code ...
@@ -237,7 +237,7 @@ For count record in database we need to used ```count()``` method take a look at
 ```  
 
 ### Create the database
-For create the database we need to used ```createDb()``` method take a look at example 
+For creating the database we need to used ```createDb()``` method take a look at an example 
 ```php
 // rest code ...
     $result = $result = $db->createDb('phone');  
@@ -245,7 +245,7 @@ For create the database we need to used ```createDb()``` method take a look at e
 ```  
 
 ### Delete the database
-For delete the database we need to used ```deleteDb()``` method take a look at example 
+For deleting the database we need to use```deleteDb()``` method take a look at an example 
 ```php
 // rest code ...
     $result = $result = $db->deleteDb('phone');  
@@ -253,8 +253,8 @@ For delete the database we need to used ```deleteDb()``` method take a look at e
 ```  
 
 ### Create the table
-For creating table we need to used ``` createTbl ```
- take a look at example:
+For creating the table we need to use ``` createTbl ```
+ take a look at an example:
 ```php
 // rest code ...
     $result = $result = $db->deleteTbl('db|_name','sql');  
@@ -262,7 +262,7 @@ For creating table we need to used ``` createTbl ```
 ```
 
 ### Delete the table
-For delete the database we need to used ```deleteTbl()``` method take a look at example 
+For deleting the database we need to used ```deleteTbl()``` method take a look at an example 
 ```php
 // rest code ...
     $result = $result = $db->deleteTbl('db|_name','users');  
