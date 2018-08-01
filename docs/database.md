@@ -3,7 +3,7 @@ Database management library bundled with Zest Framework
 # Database management
 
 ## Configuration
-In order to the user database in zest framework you need config it properly
+In order to use a database in zest framework you need config it properly
 in Config.php you have to correct according to the details of your server.
 
 ```php
@@ -180,7 +180,7 @@ For debuging or seeing the query you need to passe  ```debug``` parameter take a
 ```  
 
 ### Delete
-For deleting a record in myself we need to used ```delete()``` method with id parameter, **Note: If it is not provided all record form specific table will be erased/deleted and this action never be undone.**
+For deleting arecord in mysql we need to used ```delete()``` method with id parameter, **Note: If it is not provided all record form specific table will be erased/deleted and this action never be undone.**
 Here is the following example:
 
 ```php
