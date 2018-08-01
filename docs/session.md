@@ -3,8 +3,7 @@ Session handling library bundled with Zest Framework
 # Session Handling
 
 ## Configuration
-There is no configuration need for using session library in zest framework  but if you want change session storage path in Config.php you have to change according to your details of your server.
-
+There is no configuration need for using session library in zest framework  but if you want change session storage path in Config.php you have to change according to the details of your server.
 ```php
 /**
  * Default Session storage path.
@@ -15,7 +14,7 @@ const Session_Path = '../Storage/Session/';
 ```
 
 ### Set
-For setting the session and its value you need to used ```setValue()``` method take a look at example:
+For setting the session and its value you need to used ```setValue()``` method take a look at an example:
 
 ```php
 <?php
@@ -34,7 +33,7 @@ class users
 }
 ```
 ### Get
-For get the session value you need to used ```getValue()``` method take a look at example:
+To get the session value you need to used ```getValue()``` method take a look at an example:
 
 ```php
 <?php
@@ -74,7 +73,8 @@ class users
 ```
 
 ### Check
-For checking is session is active you need to used ```unsetValue()``` method take a look at example:
+For checking is session is active you need to used ```unsetValue()``` method take a look at an example:
+
 
 ```php
 <?php
