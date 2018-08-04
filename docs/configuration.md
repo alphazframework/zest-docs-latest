@@ -12,7 +12,7 @@
 - **Data_Dir =>** Default Data directory.
 - **Session_Path =>** Default path for session storage.
 - **THEME_PATH =>** Default theme/view path.
-- **AUTO_CSRF_VARIFIED =>** If on auto varified csrf token.
+- **AUTO_CSRF_VERIFIED =>** If on auto varified csrf token.
 - **CSRF_TIMESTAMP =>** csrf token should expire.
 - **CRYPTO_KEY =>** Cypto key use for cryptography.
 - **Maintenance =>** If enabled, site will show that site is in maintenance mode.
