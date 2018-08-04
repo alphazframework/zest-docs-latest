@@ -14,7 +14,7 @@
 - **THEME_PATH =>** Default theme/view path.
 - **AUTO_CSRF_VERIFIED =>** If on auto verified csrf token.
 - **CSRF_TIMESTAMP =>** csrf token should expire.
-- **CRYPTO_KEY =>** Cypto key use for cryptography.
-- **Maintenance =>** If enabled, site will show that site is in maintenance mode.
+- **CRYPTO_KEY =>** Crypto key use for cryptography. 
+- **Maintenance =>** If enabled, site will show maintenance mode..
 - **ROUTER_CACHE** => Set to true to enable caching, or false to disable caching. Default value is true.
 - **ROUTE_CACHE_REGENERATE** Timestamp for cache file. After it expires, the cache file auto-refreshes. Default value is 3600 (1 hour).
