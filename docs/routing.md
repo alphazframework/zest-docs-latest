@@ -31,7 +31,7 @@ Zest Franework provide router caching feature so you should take advantage of Ze
 
 Using the route cache will drastically decrease the amount of time it takes to register all of your application's routes. In some cases, your route registration may even be up to 100x faster. To generate a route cache, just need to enable from config file
 
-**ROUTER_CACHE** => set to true for enable caching, false to disable caching , Default value is true
+**ROUTER_CACHE** => set to true to enable caching, or false to disable caching. Default value is true.
 
 Zest framework provide an easy creating website using zest
 

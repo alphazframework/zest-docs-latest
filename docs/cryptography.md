@@ -3,7 +3,7 @@ Cryptography encryption/decryption library bundled with Zest Framework
 # Cryptography
 
 ### Encryption
-To encrypt the string/data you need to use a ```encrypt()``` function just simple and straightforward take a look at an example: 
+To encrypt the string/data you need to use a ```encrypt()``` function just simple and straightforward take a look at an example:
 
 ```php
 <?php
@@ -14,7 +14,7 @@ encrypt("Hello World");
 
 ```
 ### Decryption
-To decrypt the string/data you need to use a ```decrypt()``` function just simple and straightforward  take a look at an example: 
+To decrypt the string/data you need to use a ```decrypt()``` function just simple and straightforward  take a look at an example:
 
 ```php
 <?php
