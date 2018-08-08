@@ -1,10 +1,10 @@
 Site Maintenance library bundled with Zest Framework
 
 # Site Maintenance
-### Enable 
-For Enable the site maintenance which means user seen message the site is in the maintenance mode there are two way
+### Enable
+There are two ways to enable maintenance mode (i.e., to show the user a message that the site is in maintenance mode).
 ##### Config file
-In the configration file you need set Maintenance to true for enable
+In the configration file you need set Maintenance to `true`.
 ```php
 /**
  * Default site maintainness.
@@ -13,32 +13,31 @@ In the configration file you need set Maintenance to true for enable
     */
 const Maintenance = true;
 ```
-##### Dynamically 
-For update site maintenance dynamically you need to create site admins and create method called adminEnableMaintenance in your Admin controller add following in this method:
-```php 
+##### Dynamically
+To enable maintenance mode dynamically you need to create site admins and create a method called `adminEnableMaintenance` in your Admin controller, and add the following in this method:
+```php
 maintenanceInstance()->updataMaintenance(true);
 ```
-### Disable 
-For Disable the site maintenance which means user not seen message the website is in maintenance mode there are two way
+### Disable
+There are two ways to disable maintenance mode.
 ##### Config file
-In the configration file you need set Maintenance to false for disalbe
+In the configration file you need set Maintenance to `false`.
 ```php
 /**
- * Default site maintainness.
+ * Default maintenance mode value.
  *
  * @var bool
-    */
+ */
 const Maintenance = false;
 ```
-##### Dynamically 
-For update site maintenance dynamically you need to create site admins and create method called adminEnableMaintenance in your Admin controller add following in this method:
-```php 
+##### Dynamically
+To disable maintenance mode dynamically you need to create site admins and create a method called `adminEnableMaintenance` in your Admin controller, and add the following in this method:
+```php
 maintenanceInstance()->updataMaintenance(false);
 ```
 ### Change the message
-For changing the default message or style little bit 
-open 503.php from your views folder
+For changing the default message or style a little bit, open `503.php` from your views folder.
 **path:** ../App/Views/errors/503.php
 
 ## Note:
-Once the maintenance is on from configure file it never be off by dynamically process, But if the maintance off from configure file it will be turn on and off by dynamically process.
+Once maintenance mode is enabled via the configuration file, it will never be disabled by a dynamic process, but if the maintance disabled via the configuration file, it can be enabled and disabled by a dynamic process.
