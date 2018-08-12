@@ -11,6 +11,7 @@ The structure of component are as follow.
 All components should be in `App/Components` folder
 
 In this example we're going to create helloworld component the structure are as follow
+
 - Components {main component folder}
   - helloworld {sub component folder e.g component name}
     - Controllers {folder contains controllers of component}
