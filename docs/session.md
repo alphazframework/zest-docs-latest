@@ -20,7 +20,7 @@ For setting the session and its value you need to used ```setValue()``` method t
 <?php
 
 namespace App\Models;
-use Softhub99\Zest_Framework\Session\Session;
+use Zest\Session\Session;
 class users
 {
 
@@ -39,7 +39,7 @@ To get the session value you need to used ```getValue()``` method take a look at
 <?php
 
 namespace App\Models;
-use Softhub99\Zest_Framework\Session\Session;
+use Zest\Session\Session;
 class users
 {
 
@@ -59,7 +59,7 @@ For deleting the session value you need to used ```unsetValue()``` method take a
 <?php
 
 namespace App\Models;
-use Softhub99\Zest_Framework\Session\Session;
+use Zest\Session\Session;
 class users
 {
 
@@ -80,7 +80,7 @@ For checking is session is active you need to used ```unsetValue()``` method tak
 <?php
 
 namespace App\Models;
-use Softhub99\Zest_Framework\Session\Session;
+use Zest\Session\Session;
 class users
 {
 

@@ -9,7 +9,7 @@ it will look like that
 ```PHP
 <?php
 namespace App\Models;
-use Softhub99\Zest_Framework\Database\Zest\Builder as Model;
+use Zest\Database\Zest\Builder as Model;
 class Post extends Model
 {
     public function get()

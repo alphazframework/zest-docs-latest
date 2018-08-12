@@ -24,9 +24,9 @@ Your home controller should look like this:
 ```PHP
 <?php
 namespace App\Controllers;
-use \Softhub99\Zest_Framework\View\View;
+use \Zest\View\View;
 
-class Home extends \Softhub99\Zest_Framework\Controller\Controller
+class Home extends \Zest\Controller\Controller
 {
     public function index()
     {

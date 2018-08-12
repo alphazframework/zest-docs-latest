@@ -41,7 +41,7 @@ Here is simple example:
 <?php
 
 namespace App\Models;
-use Softhub99\Zest_Framework\Database\MYSQL as DB;
+use Zest\Database\MYSQL as DB;
 use Config\Config;
 class Post extends DB
 {

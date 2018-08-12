@@ -4,8 +4,8 @@ You can easily create controllers in ""Zest"" Framework goto _App/Controllers/_ 
 ## Writing simple controller
 	<?php
 	namespace App\Controllers;
-     use Softhub99\Zest_Framework\View\View; //you will learn more about view in later this is for accessing view
-	class Home extends \Softhub99\Zest_Framework\Controller\Controller
+     use Zest\View\View; //you will learn more about view in later this is for accessing view
+	class Home extends \Zest\Controller\Controller
 	{
 
 	    public function index()
@@ -26,9 +26,9 @@ This is easy way for creating controllers this create home page
 
 	namespace App\Controllers;
 
-	use Softhub99\Zest_Framework\View\View; //you will learn more about view in later this is for accessing view
+	use Zest\View\View; //you will learn more about view in later this is for accessing view
 
-	class About extends \Softhub99\Zest_Framework\Controller\Controller
+	class About extends \Zest\Controller\Controller
 	{
 
 	    public function index()

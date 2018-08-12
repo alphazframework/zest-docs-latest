@@ -18,10 +18,10 @@ $router->add('user/create',['controller'=>"User",'action'=>'userCreate']);
 
 <?php
 namespace App\Controllers;
-use Softhub99\Zest_Framework\View\View;
-use Softhub99\Zest_Framework\Validation\Validation;
+use Zest\View\View;
+use Zest\Validation\Validation;
 
-class User extends \Softhub99\Zest_Framework\Controller\Controller
+class User extends \Zest\Controller\Controller
 {
 
     public function usercreate()

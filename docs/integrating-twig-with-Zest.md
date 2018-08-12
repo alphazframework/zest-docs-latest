@@ -42,7 +42,7 @@ _**App/Controllers/Home.php**_
 ```PHP
 <?php
 namespace App\Controllers;
-class Home extends \Softhub99\Zest_Framework\Controller\Controller
+class Home extends \Zest\Controller\Controller
 {
     public function index()
     {

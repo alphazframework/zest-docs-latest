@@ -39,10 +39,10 @@ To send an email, simply do the following:
 <?php
 
 namespace App\Controllers;
-use Softhub99\Zest_Framework\View\View;
-use Softhub99\Zest_Framework\Mail\Mail;
+use Zest\View\View;
+use Zest\Mail\Mail;
 
-class Home extends \Softhub99\Zest_Framework\Controller\Controller
+class Home extends \Zest\Controller\Controller
 {
 
     public function index()
