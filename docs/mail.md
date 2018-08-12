@@ -1,34 +1,40 @@
 The Zest framework provides support for sending email using SMTP and phpMailer.
 
 # SMTP Setup
-To send email using SMTP, first update your `Config.php` file as follows:
+To send email using SMTP, first update your `Email.php` file as follows:
 
 ```php
 
-/**
- * SMPT Host
- *
- * @var string
- */
-const SMPT_HOST = "your-smtp-host";
-/**
- * SMPT User
- *
- * @var string
- */
-const SMPT_USER = "your-smtp-user";
-/**
- * SMPT Pass
- *
- * @var string
- */
-const SMPT_PASS = "your-smtp-pass";
-/**
- * SMPT Port
- *
- * @var int
- */
-const SMPT_PORT = 111;
+    /**
+     * Site Email.
+     *
+     * @var string
+     */
+    const SITE_EMAIL = 'your-site-email';
+    /**
+     * SMPT Host.
+     *
+     * @var string
+     */
+    const SMTP_HOST = 'your-smtp-host';
+    /**
+     * SMPT User.
+     *
+     * @var string
+     */
+    const SMTP_USER = 'your-smtp-user';
+    /**
+     * SMPT Pass.
+     *
+     * @var string
+     */
+    const SMTP_PASS = 'your-smtp-pass';
+    /**
+     * SMPT Port.
+     *
+     * @var int
+     */
+    const SMTP_PORT = 111;
 
 ```
 
