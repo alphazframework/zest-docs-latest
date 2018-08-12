@@ -15,6 +15,7 @@ pages:
     - Cryptography: cryptography.md
     - Site Maintenance: maintenance.md
     - Zest Console: console.md
+    - Components: component.md
     - Upgrade to 1.9.1: UPGRADE-1.9.1.md
     - Upgrade to 1.9.3: Upgrade to 1.9.3.md
     - Upgrade to 1.9.4: UPGRADE-1.9.4.md
