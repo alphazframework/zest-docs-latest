@@ -4,44 +4,8 @@ Database management library bundled with Zest Framework
 
 ## Configuration
 In order to use a database in Zest framework you need config it properly
-in Database.php you have to correct according to the details of your server.
 
-```php
-
-    /* Database DRIVE */
-    /**
-     * Database driver.
-     *
-     * @var string
-     */
-    const DB_DRIVER = 'database-driver'; // mysql is recommendeds
-    /* Start MYSQL configuration */
-/**
- * Database host.
- *
- * @var string
- */
-const DB_HOST = 'your-database-host';
-/**
- * Database name.
- *
- * @var string
- */
-const DB_NAME = 'your-database-name';
-/**
- * Database user.
- *
- * @var string
- */
-const DB_USER = 'your-database-user';
-
-/**
- * Database password.
- *
- * @var string
- */
-const DB_PASS = 'your-database-password';
-```
+http://zest.readthedocs.io/en/latest/configuration/#database
 
 ### Simple example
 Here is simple example:
@@ -50,14 +14,14 @@ Here is simple example:
 <?php
 
 namespace App\Models;
-use Zest\Database\MYSQL as DB;
-use Config\Config;
+use Zest\Database\Db as DB;
+use Config\Database;
 class Post extends DB
 {
 	/*
 	* Store database name
 	*/
-	protected static $db_name = Config::DB_NAME;
+	protected static $db_name = Database::DB_NAME;
 	/*
 	* Store database table name
 	*/
@@ -65,7 +29,7 @@ class Post extends DB
     public function name()
     {
         $db = new DB();
-        $db->method(); //example code
+        $db->db()->method(); //example code
     }
 }
 ```
@@ -79,7 +43,7 @@ For insert data into the database, you need to used ```insert();``` method with 
 /*
 * Store database name
 */
-protected static $db_name = Config::DB_NAME;
+protected static $db_name = Database::DB_NAME;
 /*
 * Store database table name
 */
@@ -88,7 +52,7 @@ public function create($field1,$field2,$field3)
 {
     $db = new DB();
    	//Prototype: $db->insert(table,dbName,params);
-    $id = $db->insert(static::$db_tbl,static::$db_name,['field1'=>$field1,'field2'=>$field2,'field3'=>$field3]);
+    $id = $db->db()->insert(static::$db_tbl,static::$db_name,['field1'=>$field1,'field2'=>$field2,'field3'=>$field3]);
     //close the database connection, its recommanded
     $db->close();
     return $id;
@@ -104,7 +68,7 @@ For selecting record you need to use ```select()``` method, take a look at follo
 /*
 * Store database name
 */
-protected static $db_name = Config::DB_NAME;
+protected static $db_name = Database::DB_NAME;
 /*
 * Store database table name
 */
@@ -112,8 +76,8 @@ protected static $db_tbl = 'posts';
 public function select()
 {
     $db = new DB();
-   	//Prototype: $db->insert(['db_name'=>'value','table'=>'value']);
-    $result = $result = $db->select(['db_name'=>static::$db_name,'table'=>static::$db_tbl]);
+   	//Prototype: $db->db()->insert(['db_name'=>'value','table'=>'value']);
+    $result = $result = $db->db()->select(['db_name'=>static::$db_name,'table'=>static::$db_tbl]);
     //close the database connection, its recommanded
     $db->close();
     return $result;
@@ -129,7 +93,7 @@ For select records at the specific condition or using where clause the method is
 /*
 * Store database name
 */
-protected static $db_name = Config::DB_NAME;
+protected static $db_name = Database::DB_NAME;
 /*
 * Store database table name
 */
@@ -137,8 +101,8 @@ protected static $db_tbl = 'posts';
 public function select($id)
 {
     $db = new DB();
-   	//Prototype: $db->insert(['db_name'=>'value','table'=>'value']);
-    $result = $result = $db->select(['db_name'=>static::$db_name,'table'=>static::$db_tbl,'wheres'=>['id = '.$id]]);
+   	//Prototype: $db->db()->insert(['db_name'=>'value','table'=>'value']);
+    $result = $result = $db->db()->select(['db_name'=>static::$db_name,'table'=>static::$db_tbl,'wheres'=>['id = '.$id]]);
     //close the database connection, its recommanded
     $db->close();
     return $result;
@@ -150,7 +114,7 @@ For using multiple wheres clauses take a look at an example:
 
 ```php
 // rest code ...
-    $result = $result = $db->select(['db_name'=>static::$db_name,'table'=>static::$db_tbl,'wheres'=>['id = '.$id,'userId ='.$userId]]);
+    $result = $result = $db->db()->select(['db_name'=>static::$db_name,'table'=>static::$db_tbl,'wheres'=>['id = '.$id,'userId ='.$userId]]);
 
 // rest code ...
 ```
@@ -160,7 +124,7 @@ For sorting orders, you need to passed ```orderby``` parameter take a look at an
 
 ```php
 // rest code ...
-    $result = $result = $db->select(['db_name'=>static::$db_name,'table'=>static::$db_tbl,'order_by'=> 'id DESC']);
+    $result = $result = $db->db()->select(['db_name'=>static::$db_name,'table'=>static::$db_tbl,'order_by'=> 'id DESC']);
     //You can also passed id ASC , or you can also passed other then id column
 // rest code ...
 ```
@@ -169,7 +133,7 @@ For selecting limited records you need to passed ```limit``` parameter take a lo
 
 ```php
 // rest code ...
-    $result = $result = $db->select(['db_name'=>static::$db_name,'table'=>static::$db_tbl,'limit' => ['start' => 3 , 'end' => 0]]);
+    $result = $result = $db->db()->select(['db_name'=>static::$db_name,'table'=>static::$db_tbl,'limit' => ['start' => 3 , 'end' => 0]]);
     //start is the limit like 10
     //end is where to start 0 means start from beganning
 
@@ -181,7 +145,7 @@ For debuging or seeing the query you need to passe  ```debug``` parameter take a
 
 ```php
 // rest code ...
-    $result = $result = $db->select(['db_name'=>static::$db_name,'table'=>static::$db_tbl,'debug'=>'on']);
+    $result = $result = $db->db()->select(['db_name'=>static::$db_name,'table'=>static::$db_tbl,'debug'=>'on']);
     //then it will var dump your query
     //like: 'SELECT * FROM users  WHERE id = 4';
 
@@ -197,7 +161,7 @@ Here is the following example:
 /*
 * Store database name
 */
-protected static $db_name = Config::DB_NAME;
+protected static $db_name = Database::DB_NAME;
 /*
 * Store database table name
 */
@@ -205,8 +169,8 @@ protected static $db_tbl = 'posts';
 public function delete($id)
 {
     $db = new DB();
-   	//Prototype: $db->insert(['db_name'=>'value','table'=>'value','wheres'=>[]]);
-    $result = $result = $db->delete(['db_name'=>static::$db_name,'table'=>static::$db_tbl,'wheres'=>['id = '.$id]]);
+   	//Prototype: $db->db()->insert(['db_name'=>'value','table'=>'value','wheres'=>[]]);
+    $result = $result = $db->db()->delete(['db_name'=>static::$db_name,'table'=>static::$db_tbl,'wheres'=>['id = '.$id]]);
     $db->close();
     return $result;
 }
@@ -220,7 +184,7 @@ For updating records in a database we need to used ```update``` method take a lo
 /*
 * Store database name
 */
-protected static $db_name = Config::DB_NAME;
+protected static $db_name = Database::DB_NAME;
 /*
 * Store database table name
 */
@@ -228,8 +192,8 @@ protected static $db_tbl = 'posts';
 public function update($id,$uId)
 {
     $db = new DB();
-   	//Prototype: $db->insert(['db_name'=>'value','table'=>'value','columns'=>[],'wheres'=>[]]);
-    $result = $result = $db->update(['db_name'=>static::$db_name,'table'=>static::$db_tbl,'columns'=>['useId'=>$uId,'update'=>time()],'wheres'=>['id = '.$id]]);
+   	//Prototype: $db->db()->insert(['db_name'=>'value','table'=>'value','columns'=>[],'wheres'=>[]]);
+    $result = $result = $db->db()->update(['db_name'=>static::$db_name,'table'=>static::$db_tbl,'columns'=>['useId'=>$uId,'update'=>time()],'wheres'=>['id = '.$id]]);
     $db->close();
     return $result;
 }
@@ -241,7 +205,7 @@ For count record in database we need to used ```count()``` method take a look at
 
 ```php
 // rest code ...
-    $result = $result = $db->count(['db_name'=>static::$db_name,'table'=>static::$db_tbl]);
+    $result = $result = $db->db()->count(['db_name'=>static::$db_name,'table'=>static::$db_tbl]);
 // rest code ...
 ```
 
@@ -249,7 +213,7 @@ For count record in database we need to used ```count()``` method take a look at
 For creating the database we need to used ```createDb()``` method take a look at an example
 ```php
 // rest code ...
-    $result = $result = $db->createDb('phone');
+    $result = $result = $db->db()->createDb('phone');
 // rest code ...
 ```
 
@@ -257,7 +221,7 @@ For creating the database we need to used ```createDb()``` method take a look at
 For deleting the database we need to use```deleteDb()``` method take a look at an example
 ```php
 // rest code ...
-    $result = $result = $db->deleteDb('phone');
+    $result = $result = $db->db()->deleteDb('phone');
 // rest code ...
 ```
 
@@ -266,7 +230,7 @@ For creating the table we need to use ``` createTbl ```
  take a look at an example:
 ```php
 // rest code ...
-    $result = $result = $db->deleteTbl('db|_name','sql');
+    $result = $result = $db->db()->deleteTbl('db|_name','sql');
 // rest code ...
 ```
 
@@ -274,6 +238,6 @@ For creating the table we need to use ``` createTbl ```
 For deleting the database we need to use the ```deleteTbl()``` method. Take a look at an example:
 ```php
 // rest code ...
-    $result = $result = $db->deleteTbl('db|_name','users');
+    $result = $result = $db->db()->deleteTbl('db|_name','users');
 // rest code ...
 ```
