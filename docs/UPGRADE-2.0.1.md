@@ -10,7 +10,7 @@ This command will automatically upgrade the core files of Zest framework.
 Upgrade the Zest file to 2.0.1 is little hard 
 you need perform following steps
 
-- first you need to replace configs files
+- first you need to replace configs files https://github.com/Softhub99/Zest/tree/2.0.1/Config
   - Config
     - Auth.php   
     - Config.php   
