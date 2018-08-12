@@ -34,6 +34,7 @@ you need perform following steps
 - Added password manipulation class
 - Update database management system
 - Update Mail class fix bug
+- Update language class remove global variables 
 - further improvement
 
 # Note:
