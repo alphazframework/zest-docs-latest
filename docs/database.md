@@ -4,9 +4,18 @@ Database management library bundled with Zest Framework
 
 ## Configuration
 In order to use a database in Zest framework you need config it properly
-in Config.php you have to correct according to the details of your server.
+in Database.php you have to correct according to the details of your server.
 
 ```php
+
+    /* Database DRIVE */
+    /**
+     * Database driver.
+     *
+     * @var string
+     */
+    const DB_DRIVER = 'database-driver'; // mysql is recommendeds
+    /* Start MYSQL configuration */
 /**
  * Database host.
  *
