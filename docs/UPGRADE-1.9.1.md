@@ -1,12 +1,12 @@
 # Upgrade to 1.9.1
 
 ## Upgrade core file
-you can upgrade core file by running command
+You can upgrade core files by running this command
 `composer update`
-this command will automatically upgrade core file of zest framework
+This command will automatically upgrade the core files of Zest framework.
 
 ## Upgrade zest file
-For updraging working file you need replace following files
+For upgrading working files, you need replace the following files.
 - Replace Config.php *path:* **projectroot/Config/Config.php**
 - Replace system.php *path:* **projectroot/system.php**
 - Add `$router->cacheRouters();` Above `$router->dispatch($_SERVER['QUERY_STRING']);` in your routes.php

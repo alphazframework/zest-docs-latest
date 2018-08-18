@@ -4,13 +4,13 @@ Zest Framework support component system/feature.
 
 ## What is component?
 
-A component is piece of code that have own routes,controllers,models,views,Middlewares and locals .
+A component is a piece of code that has its own routes, controllers, models, views, middlewares and locals.
 
 ## Structure of component
 The structure of component are as follow.
 All components should be in `App/Components` folder
 
-In this example we're going to create helloworld component the structure are as follow
+In this example we're going to create helloworld component. The structure is as follow.
 
 - Components {main component folder}
   - helloworld {sub component folder e.g component name}
@@ -23,7 +23,7 @@ In this example we're going to create helloworld component the structure are as 
 
 Lets create helloworld component
 
-first add our route in `routes.php` 
+first add our route in `routes.php`
 
 ```php
 <?php
@@ -84,14 +84,14 @@ Then write `index.php` in Views/Home folder
 	<div class='container-fluid'>
 		<h1><?= printc('title:home:hello'); ?></h1>
 	</div>
-</body>	
+</body>
 </html>
 
 ```
 The `printc()` is built in function in zest framework for print language string in component
 the `site_base_url()` return the current url of site
 
-Now last create our langauge file `en.php` in local folder
+Now lastly, create our langauge file `en.php` in the local folder
 
 ```php
 <?php
@@ -102,4 +102,4 @@ Now last create our langauge file `en.php` in local folder
 
 ```
 
-Congrulation you have successfully created one component.
+Congratulations! You have successfully created a component.
