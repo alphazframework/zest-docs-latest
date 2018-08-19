@@ -19,7 +19,6 @@ pages:
     - Upgrade to 2.0.1: UPGRADE-2.0.1.md
     - Old Upgrades: Old-Upgrade.md
     - Contribute: zestcontribute.md
-    - v2.0.1: v2.0.1/index.md
 theme: readthedocs    
     
 
