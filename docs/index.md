@@ -1,4 +1,5 @@
 #Zest Framework
+## For version: 2.0.1 (for 2.0.2 will be uploaded soon)
 Welcome to Zest! Zest is a very light-weight PHP framework without any dependencies except core and autoloader.
 # Who is Zest For?
 Zest is for PHP developers who want to build apps instead of coding common things like validation, routing, database manipulation, etc, from scratch. Zest offers a set of well-defined toolkits that take care of those things allowing you to focus on building your app.
