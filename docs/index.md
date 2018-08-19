@@ -14,5 +14,10 @@ Composer autoloader is used for autoloading files. It's necessary as a means to 
 ##### Useful info:
 The size of Zest core files less then 1MB.
 
+## Previous Versions
+There is no documentation avilable for previous version but you can easily upgrade to latest version. if you have any problem/question ask me directly https://web.facebook.com/malikumerfarooq01/
+in future we will privide documents of previous version  
+
 # Note
 The documentation for Zest framework is not complete. We will complete soon.
+
