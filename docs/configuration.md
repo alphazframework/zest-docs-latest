@@ -18,15 +18,15 @@
 
 ## Database
 
-- **DB_DRIVER =>** Drieve of database for now only supported MySQL.
+- **DB_DRIVER =>** Database driver. For now, only supports MySQL.
 - **DB_HOST =>** Database host/IP.
-- **DB_NAME =>** Name of database that you want use.
-- **DB_USER =>** Username of database.
-- **DB_PASS =>** Password of databse.
+- **DB_NAME =>** Name of database that you want to use.
+- **DB_USER =>** Database username.
+- **DB_PASS =>** Database password.
 
 ## Email
 
-- **SITE_EMAIL =>** Site Email address.
+- **SITE_EMAIL =>** Site email address.
 - **SMTP_HOST =>** SMTP host/IP.
 - **SMTP_USER =>** Username of SMTP.
 - **SMTP_PASS =>** Password of SMTP.
@@ -34,14 +34,14 @@
 
 ## Auth
 
-- **AUTH_DB_NAME =>** Name of database that you want use in auth.
-- **AUTH_DB_TABLE =>** Name of database table that you want use in auth.
+- **AUTH_DB_NAME =>** Name of the database that you want to use in auth.
+- **AUTH_DB_TABLE =>** Name of the database table that you want to use in auth.
 - **VERIFICATION_LINK =>** Default link for verification account/email.
-- **RESET_PASSWORD_LINK =>** Default link for reset password.
+- **RESET_PASSWORD_LINK =>** Default link for the reset password link.
 - **IS_SMTP =>** If set to true send mail in auth over SMTP.
 - **IS_VERIFY_EMAIL =>** If set to true verification of account/email is required.
-- **STICKY_PASSWORD =>** Is password should be strong. 
-- **AUTH_ERRORS =>** Default error msgs. 
-- **SUCCESS =>** Default success msgs. 
-- **AUTH_SUBJECTS =>** Default subjects of emails. 
-- **AUTH_MAIL_BODIES =>** Defaults body of emails. 
+- **STICKY_PASSWORD =>** Is password should be strong.
+- **AUTH_ERRORS =>** Default error msgs.
+- **SUCCESS =>** Default success msgs.
+- **AUTH_SUBJECTS =>** Default email subject.
+- **AUTH_MAIL_BODIES =>** Default email body.

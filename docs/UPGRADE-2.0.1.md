@@ -7,18 +7,17 @@ This command will automatically upgrade the core files of Zest framework.
 
 ## Upgrade Zest files
 
-Upgrade the Zest file to 2.0.1 is little hard 
-you need perform following steps
+Upgrading the Zest file to 2.0.1 is little difficult. You need to perform following steps.
 
-- first you need to replace configs files https://github.com/Softhub99/Zest/tree/2.0.1/Config
+- First you need to replace config files https://github.com/Softhub99/Zest/tree/2.0.1/Config
   - Config
-    - Auth.php   
-    - Config.php   
-    - Database.php   
-    - Email.php   
+    - Auth.php
+    - Config.php
+    - Database.php
+    - Email.php
 
 - Update according to your application requirement
-- Now download notepad++ as its easy to use open the notepad++ 
+- Now download notepad++ as its easy to use open the notepad++
 - Click `Search` form menu then click `Find in files`
 - Write `Softhub99\Zest_Framework` in *find what* box, and write `Zest` in *Replace With* box
 - Browse your project from directory box
@@ -34,7 +33,7 @@ you need perform following steps
 - Added password manipulation class
 - Update database management system
 - Update Mail class fix bug
-- Update language class remove global variables 
+- Update language class remove global variables
 - further improvement
 
 # Note:

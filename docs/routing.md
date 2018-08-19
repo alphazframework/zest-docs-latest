@@ -4,7 +4,7 @@
 ## Simple way to define router
 `$router->add('path', ['controller' => 'name', 'action' => 'name']);`
 
-the path is the like example.com/about in this case about will be the path controller is the name of controller which one you want use for this route action is method of controller
+the path is the like example.com/about in this case about will be the path controller is the name of controller which one you want to use for this route action is method of controller
 
 ### Dispatch
 `$router->dispatch($_SERVER['QUERY_STRING']);` are use to process request
