@@ -16,10 +16,8 @@ pages:
     - Site Maintenance: maintenance.md
     - Zest Console: console.md
     - Components: component.md
-    - Upgrade to 1.9.1: UPGRADE-1.9.1.md
-    - Upgrade to 1.9.3: Upgrade to 1.9.3.md
-    - Upgrade to 1.9.4: UPGRADE-1.9.4.md
     - Upgrade to 2.0.1: UPGRADE-2.0.1.md
+    - Old Upgrades: Old-Upgrade.md
     - Contribute: zestcontribute.md
 theme: readthedocs    
     
