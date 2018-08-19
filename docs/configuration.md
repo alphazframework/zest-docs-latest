@@ -32,18 +32,14 @@
 - **SMTP_PASS =>** Password of SMTP.
 - **SMTP_PORT =>** Port of SMTP
 
-[comment]: <> (
-
+<!---
 - **DB_DRIVER =>** Database driver. For now, only supports MySQL.
 - **DB_NAME =>** Name of database that you want to use.
-
 ### MYSQL Configuration
 - **MYSQL_HOST =>** Database host/IP.
 - **MYSQL_USER =>** Database username.
 - **MYSQL_PASS =>** Database password.
-
-
-) 
+-->
 
 ## Auth
 
