@@ -1,0 +1,23 @@
+site_name: Zest
+pages:
+    - Home: index.md
+    - Installation: installation.md
+    - Configuration: configuration.md
+    - Routing: routing.md
+    - Controllers: controller.md
+    - Views: views.md
+    - Models: model.md
+    - Validation: validation.md
+    - Sending Mail: mail.md
+    - Database Manipulation: database.md
+    - Session Handling: session.md
+    - Cryptography: cryptography.md
+    - Site Maintenance: maintenance.md
+    - Zest Console: console.md
+    - Components: component.md
+    - Dependencies Injection: di.md 
+    - Logger: logger.md
+    - Upgrade Form 2.0.2: UPGRADE-2.0.2.md
+theme: readthedocs    
+    
+
