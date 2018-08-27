@@ -17,6 +17,7 @@ pages:
     - Components: component.md
     - Dependencies Injection: di.md 
     - Logger: logger.md
+    - Auth: auth.md
     - Upgrade Form 2.0.2: UPGRADE-2.0.2.md
 theme: readthedocs    
     
