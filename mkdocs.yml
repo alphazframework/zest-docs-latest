@@ -11,12 +11,15 @@ pages:
     - Sending Mail: mail.md
     - Database Manipulation: database.md
     - Session Handling: session.md
+    - Cookie management: cookie.md
     - Cryptography: cryptography.md
     - Site Maintenance: maintenance.md
     - Zest Console: console.md
     - Components: component.md
     - Dependencies Injection: di.md 
     - Logger: logger.md
+    - Input Handling: input.md
+    - Output Handling: output.md
     - Auth: auth.md
     - Upgrade Form 2.0.2: UPGRADE-2.0.2.md
 theme: readthedocs    

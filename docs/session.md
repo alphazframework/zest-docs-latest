@@ -73,7 +73,7 @@ class users
 ```
 
 ### Check
-For checking is session is active you need to used ```unsetValue()``` method take a look at an example:
+For checking is session is active you need to used ```isSession()``` method take a look at an example:
 
 
 ```php
