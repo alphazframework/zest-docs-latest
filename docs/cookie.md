@@ -3,7 +3,7 @@ Cookie Management library bundled with Zest Framework
 # Cookie Management
 
 ## Configuration
-There is no configuration need for using session library in zest framework 
+There is no configuration need for using session library in Zest framework
 ### Set
 For setting the cookie and its value you need to used ```set_cookie()``` function take a look at an example:
 

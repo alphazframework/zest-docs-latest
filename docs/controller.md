@@ -3,7 +3,7 @@ _The controller is generally responsible for performing a request action._
 You can easily create controllers in ""Zest"" Framework goto _App/Controllers/_ form project root you have to create more controller here.
 ## Writing simple controller
 
-```php		
+```php
 <?php
 namespace App\Controllers;
 	use Zest\View\View; //you will learn more about view in later this is for accessing view

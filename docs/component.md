@@ -1,13 +1,13 @@
 # Component
 
-Zest Framework support component system/feature.
+Zest Framework supports a component system/feature.
 
-## What is component?
+## What is a component?
 
-A component is a piece of code that has its own routes, controllers, models, views, middlewares and locals.
+A component is a piece of code that has its own routes, controllers, models, views, middleware and locals.
 
-## Structure of component
-The structure of component are as follow.
+## The structure of components
+The structure of components is as follows.
 All components should be in `App/Components` folder
 
 In this example we're going to create helloworld component. The structure is as follow.
@@ -21,17 +21,17 @@ In this example we're going to create helloworld component. The structure is as 
     - Views {folder contains views of component}
     - routes.php  {file, where the routes are defined}
 
-Lets create helloworld component
+Let's create a `helloworld` component.
 
-first add our route in `routes.php`
+First, add our route in `routes.php`
 
 ```php
 <?php
 
-//namespace required to define your component you can add many routes in one component as well
+// namespace is required to define your component so that you can add many routes into one component as well.
 $namespace = "App\Components\helloworld\Controllers";
 
-// Its create the url localhost/blog/helloworld'
+// This creates the url `localhost/blog/helloworld`.
 $com->add('helloworld', ['controller' => 'Home', 'action' => 'index', 'namespace'=>$namespace]);
 
 // the helloworld is the component name if you have different component chagne it according to name.
@@ -63,7 +63,7 @@ class Home extends \Zest\Component\Controller\Controller
 
 ```
 
-Then write `index.php` in Views/Home folder
+Then write `index.php` in the Views/Home folder
 
 ```html
 <!doctype html>
@@ -88,10 +88,10 @@ Then write `index.php` in Views/Home folder
 </html>
 
 ```
-The `printc()` is built in function in zest framework for print language string in component
-the `site_base_url()` return the current url of site
+`printc()` is a built-in function in Zest framework for printing language strings in components.
+`site_base_url()` returns the current URL of the site.
 
-Now lastly, create our langauge file `en.php` in the local folder
+Now lastly, create our language file `en.php` in the local folder.
 
 ```php
 <?php
