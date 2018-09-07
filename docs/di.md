@@ -1,11 +1,11 @@
-# Dependencies Injection
+# Dependency Injection
 
-Zest framework provide ioc to load dependent classes automatically 
+Zest framework provides IoC to load dependent classes automatically.
 
 ### Where to define
 Go to `Config/Dependencies.php`
 
-you will see somthing following
+You should see something like the following:
 
 ```php
 <?php

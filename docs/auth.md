@@ -3,7 +3,7 @@ Auth Management library bundled with Zest Framework
 # Auth Management
 
 ## Configuration
-There is configuration need for using Auth Management library in zest framework 
+There is configuration need for using Auth Management library in zest framework
 open - `Config/Auth.php`
 ```php
 /**
@@ -198,35 +198,35 @@ use Zest\Auth\User;
 
 class Account extends \Zest\Controller\Controller
 {
-    //check is user is login or not
-    public function isLogin() 
+    // Check whether the user is logged in.
+    public function isLogin()
     {
         $user = new User;
-        // in Auth user class there is method isLogin to check is user login or not
+        // In the `Auth` user class there is a method, `isLogin`, which checks whether the user is logged in.
         if ($user->isLogin()) {
-            //redirect() is builtin function in zest framework for redirect to another page
+            // Redirect() is built-in function in Zest framework for redirecting to another page.
             redirect(site_base_url()."account/profile/edit");
-        } 
+        }
     }
-    //User login form
+    // User login form
     public function login()
     {
         $this->isLogin();
-        //Loading the view form
+        // Loading the view form
         View::view("account/login");
     }
-    //Process the login request/actuin
-    public function loginProcess() 
+    // Process the login request/action
+    public function loginProcess()
     {
         $this->isLogin();
-        //Getting the user value
-        // using builtin input function
-        //escape function clean the input for escaping
+        // Getting the user value
+        // Using the built-in input function
+        // Escape function cleans the input for escaping
         $username = escape(input('username'));
         $password = escape(input('password'));
         $auth = new Auth;
         //Call the auth signin method accpet two arguments
-        // username and password 
+        // username and password
         $auth->signin()->signin($username,$password);
         //check if there is error
         if ($auth->fail()) {
@@ -253,8 +253,8 @@ class Account extends \Zest\Controller\Controller
         $this->isLogin();
         //Load the signup form
         View::view("account/signup");
-    } 
-    public function signupProcess() 
+    }
+    public function signupProcess()
     {
         $this->isLogin();
         //Getting the user value
@@ -267,7 +267,7 @@ class Account extends \Zest\Controller\Controller
         $confirm = escape(input('confirm'));
         $auth = new Auth;
         //Signup method accpet the three required arguments
-        // $username,$email and password 
+        // $username,$email and password
         //Fourth array argument is optional you can provide many fields in fourth argument if want
         $auth->signup()->signup($username,$email,$password,['name' => $name, 'passConfirm' => $confirm,'role' => 'normal','ip' => (new \Zest\UserInfo\UserInfo)->ip()]);
        //check if there is error
@@ -290,14 +290,14 @@ class Account extends \Zest\Controller\Controller
         }
     }
     // Logout the users
-    public function logout() 
+    public function logout()
     {
         $auth = new Auth;
         // Call the logout method in auth class
         $auth->logout();
         //redirect the user to login page back
         redirect(site_base_url()."account/login");
-    }     
+    }
     public function profileEdit()
     {
         $user = new User;
@@ -308,7 +308,7 @@ class Account extends \Zest\Controller\Controller
         } else {
             View::view('errors/404');
         }
-    }      
+    }
     public function profileUpdate()
     {
         $user = new User;
@@ -325,7 +325,7 @@ class Account extends \Zest\Controller\Controller
         if ($user->isEmail($email)) {
             $error = true;
             echo "Sorry, {$email} email already exists, try another";
-        }        
+        }
         if ($error !== true) {
             $auth = new Auth;
             $id = $user->loginUser()[0]['id'];
@@ -344,13 +344,13 @@ class Account extends \Zest\Controller\Controller
                 }
             } else {
                 echo 'Your account has been updated successfully';
-            }            
+            }
         }
     }
     public function profileBioUpdate()
     {
         $user = new User;
-        $bio = escape(input('bio'));      
+        $bio = escape(input('bio'));
         $auth = new Auth;
         //get id of login user
         $id = $user->loginUser()[0]['id'];
@@ -369,13 +369,13 @@ class Account extends \Zest\Controller\Controller
             }
         } else {
             echo 'Your account bio has been updated successfully';
-        }            
-    }  
+        }
+    }
     public function profilePasswordUpdate()
     {
         $user = new User;
-        $password = escape(input('password'));   
-        $confirm = escape(input('confirm'));      
+        $password = escape(input('password'));
+        $confirm = escape(input('confirm'));
         $auth = new Auth;
         //get id of login user
         $id = $user->loginUser()[0]['id'];
@@ -394,9 +394,9 @@ class Account extends \Zest\Controller\Controller
             }
         } else {
             echo 'Your account password has been updated successfully';
-        }            
-    }    
-    public function profileView() 
+        }
+    }
+    public function profileView()
     {
        $username = $this->route_params['username'];
        $username = str_replace("@", '', $username);
@@ -407,8 +407,8 @@ class Account extends \Zest\Controller\Controller
             View::view('account/profileView',$args[0]);
        } else {
             View::view('errors/404');
-       } 
-    }  
+       }
+    }
     //Reset password form where user enter his email
     public function reset()
     {
@@ -435,7 +435,7 @@ class Account extends \Zest\Controller\Controller
             }
         } else {
             echo 'Your Password reset request has been recieved check your email';
-        }  
+        }
     }
     public function resetPassword()
     {
@@ -474,13 +474,13 @@ class Account extends \Zest\Controller\Controller
         } else {
             $auth->update()->update(['resetToken' => 'NULL'],$id);
             echo "Password update successfully ";
-        }         
+        }
     }
 }
 
 ```
 
-In the account controller we called method form auth management 
+In the account controller we called method form auth management
 
 ### View
 

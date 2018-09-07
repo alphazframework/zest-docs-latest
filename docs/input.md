@@ -10,11 +10,11 @@ input function is use to get any http type value its accpet one paramter which i
   $username = input('username');
 ```
 
-## esacpe function
+## Escape function
 
-escape function is use to clean user input form any type of malicious code its accpet one paramter which is value that you want clean
+The escape function is use to clean user input form any type of malicious code its accpet one paramter which is value that you want clean
 
-```php 
+```php
 $username = input('username');
 $username = escape($username);
 //OR

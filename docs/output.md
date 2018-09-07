@@ -11,9 +11,9 @@ printl function is use to get language string value form language string file (t
 ```
 
 ## printc function
-printc function is use to get language string value form language string file only in components 
+printc function is use to get language string value form language string file only in components
 
-```php 
+```php
   echo printc('home:welcome');
 ```
 

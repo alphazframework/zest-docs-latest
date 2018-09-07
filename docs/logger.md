@@ -5,7 +5,7 @@ Logging is one of the most ubiquitous tasks encountered in PHP. We use logs to t
 
 ## Use logger
 
-```php 
+```php
 $logger = new \Zest\Common\Logger\Logger;
 $logger->notice('This file {file} is not found',['file' => 'user.jpg']);
 //Display the log msg

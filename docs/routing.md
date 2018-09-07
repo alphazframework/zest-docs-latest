@@ -31,8 +31,8 @@ its create url example.com/profile/username you can pass string+numbers here and
 ```php
 <?php
 /**
-    * @param target, 
-    * @param handler, fully qualified classname and method or Closure 
+    * @param target,
+    * @param handler, fully qualified classname and method or Closure
  */
 
 $router->get('', 'Home@index');
@@ -48,8 +48,8 @@ $router->get('', 'Home@index');
 ```php
 <?php
 /**
-    * @param target, 
-    * @param handler, fully qualified classname and method or Closure 
+    * @param target,
+    * @param handler, fully qualified classname and method or Closure
  */
 
 $router->post('login', 'Home@login');
@@ -63,10 +63,10 @@ $router->post('login', 'Home@login');
 The Zest Route class supports all major HTTP Verbs (POST, GET, PUT, PATCH, DELETE) for example to create a route with PATCH HTTP verb simple do the following
 
 ```php
-<?php 
+<?php
 /**
-    * @param target, 
-    * @param handler, fully qualified classname and method or Closure 
+    * @param target,
+    * @param handler, fully qualified classname and method or Closure
  */
 
 $router->patch('profile/update', 'Account@update');
